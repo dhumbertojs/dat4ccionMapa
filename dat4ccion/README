@@ -1,0 +1,4 @@
+docker build -f Dockerfile_base --progress=plain -t dat4ccionmapa_base .
+docker build -f Dockerfile --progress=plain -t dat4ccionmapa:latest .
+docker run -p 80:80 dat4ccionmapa:latest
+# then go to 127.0.0.1:80
