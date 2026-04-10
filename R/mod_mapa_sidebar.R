@@ -199,10 +199,22 @@ mod_mapa_sidebar_server <- function(id, data_sf, data_violencia) {
     })
 
     # Datos combinados para el mapa
+    # map_data <- reactive({
+    #   req(data_sf(), data_violencia())
+    #   data_sf() |>
+    #     dplyr::left_join(data_violencia(), by = "CVE_ENT")
+    # })
+
     map_data <- reactive({
       req(data_sf(), data_violencia())
-      data_sf() |>
-        dplyr::left_join(data_violencia(), by = "CVE_ENT")
+
+      sf::st_as_sf(
+        dplyr::left_join(
+          data_sf(),
+          data_violencia(),
+          by = "CVE_ENT"
+        )
+      )
     })
 
     # Paleta de colores personalizada

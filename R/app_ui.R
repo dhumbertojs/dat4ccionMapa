@@ -113,7 +113,7 @@ app_ui <- function(request) {
           style = "background-color: #F5F0FF; border: 1px solid rgba(158, 70, 173, 0.2); border-radius: 8px; padding: 24px;",
           tags$div("43.7%",
                    style = "font-size: 42px; font-weight: 700; color: #4D1A72; margin-bottom: 8px;"),
-          tags$p("Mujeres que perciben inseguro su municipio",
+          tags$p("Mujeres que perciben inseguro su colonia o localidad",
                  style = "font-size: 14px; color: #1a1a2e; margin: 0;")
         )
       ),
@@ -129,7 +129,7 @@ app_ui <- function(request) {
                 style = "font-size: 28px; font-weight: 700; color: #4D1A72; margin-bottom: 16px;"),
         tags$p(
           "El índice de violencia de género es un indicador ponderado que integra
-          ocho variables clave para medir la situación de violencia hacia las mujeres
+          seis variables clave para medir la situación de violencia hacia las mujeres
           en cada entidad federativa de México. Los datos corresponden al año 2021.",
           style = "font-size: 16px; color: #1a1a2e; line-height: 1.6; margin-bottom: 24px;"
         ),
