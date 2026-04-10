@@ -21,6 +21,8 @@ app_ui <- function(request) {
           display: flex;
           justify-content: space-between;
           align-items: flex-start;
+          flex-wrap: wrap;
+    gap: 16px;
         ",
         tags$div(
           tags$h1(
@@ -82,7 +84,10 @@ app_ui <- function(request) {
 
         # KPI 1 — Feminicidios
         tags$div(
-          style = "background-color: #F5F0FF; border: 1px solid rgba(158, 70, 173, 0.2); border-radius: 8px; padding: 24px;",
+          style = "background-color: #F5F0FF;
+          border: 1px solid rgba(158, 70, 173, 0.2);
+          border-radius: 16px;
+          padding: 32px 24px;",
           tags$div("1.1",
                    style = "font-size: 42px; font-weight: 700; color: #4D1A72; margin-bottom: 8px;"),
           tags$p("Tasa de feminicidios por 100 mil mujeres",
@@ -92,7 +97,10 @@ app_ui <- function(request) {
 
         # KPI 2 — Índice
         tags$div(
-          style = "background-color: #F5F0FF; border: 1px solid rgba(158, 70, 173, 0.2); border-radius: 8px; padding: 24px;",
+          style = "background-color: #F5F0FF;
+          border: 1px solid rgba(158, 70, 173, 0.2);
+          border-radius: 16px;
+          padding: 32px 24px;",
           tags$div("0.46",
                    style = "font-size: 42px; font-weight: 700; color: #4D1A72; margin-bottom: 8px;"),
           tags$p("Promedio nacional del índice de violencia",
@@ -101,7 +109,10 @@ app_ui <- function(request) {
 
         # KPI 3 — AVGM
         tags$div(
-          style = "background-color: #F5F0FF; border: 1px solid rgba(158, 70, 173, 0.2); border-radius: 8px; padding: 24px;",
+          style = "background-color: #F5F0FF;
+          border: 1px solid rgba(158, 70, 173, 0.2);
+          border-radius: 16px;
+          padding: 32px 24px;",
           tags$div("22",
                    style = "font-size: 42px; font-weight: 700; color: #4D1A72; margin-bottom: 8px;"),
           tags$p("Entidades con Alerta de Violencia de Género activa",
@@ -110,7 +121,10 @@ app_ui <- function(request) {
 
         # KPI 4 — Percepción
         tags$div(
-          style = "background-color: #F5F0FF; border: 1px solid rgba(158, 70, 173, 0.2); border-radius: 8px; padding: 24px;",
+          style = "background-color: #F5F0FF;
+          border: 1px solid rgba(158, 70, 173, 0.2);
+          border-radius: 16px;
+          padding: 32px 24px;",
           tags$div("43.7%",
                    style = "font-size: 42px; font-weight: 700; color: #4D1A72; margin-bottom: 8px;"),
           tags$p("Mujeres que perciben inseguro su colonia o localidad",
@@ -173,40 +187,35 @@ app_ui <- function(request) {
                     tags$td("10%", style = "padding: 12px 16px; font-size: 14px; font-weight: 700;"),
                     tags$td("ENVIPE", style = "padding: 12px 16px; font-size: 14px; color: #717182;")
             ),
-            # tags$tr(style = "background: #FFFFF1;",
-            #         tags$td("Presupuesto AVGM", style = "padding: 12px 16px; font-size: 14px;"),
-            #         tags$td("20-25%", style = "padding: 12px 16px; font-size: 14px; font-weight: 700;"),
-            #         tags$td("Transparencia presupuestaria", style = "padding: 12px 16px; font-size: 14px; color: #717182;")
-            # ),
-            # tags$tr(style = "background: #F5F0FF;",
-            #         tags$td("Cobertura mediática", style = "padding: 12px 16px; font-size: 14px;"),
-            #         tags$td("10%", style = "padding: 12px 16px; font-size: 14px; font-weight: 700;"),
-            #         tags$td("Scraping web", style = "padding: 12px 16px; font-size: 14px; color: #717182;")
-            # )
           )
         ),
 
         # Notas en 3 columnas
         tags$h3("Notas",
-                style = "font-size: 18px; font-weight: 500; color: #4D1A72; margin: 24px 0 12px 0;"),
+                style = 'font-size: 14px; font-weight: 700; color: #4D1A72; margin: 0 0 16px 0;'),
         tags$div(
-          style = "display: grid; grid-template-columns: 1fr 1fr 1fr; background-color: #F5F0FF; border-top: 1px solid rgba(158, 70, 173, 0.2); border-radius: 0 0 12px 12px; width: 100%;",
+          style = 'display: grid;
+         grid-template-columns: 1fr 1fr 1fr;
+         background-color: #F5F0FF !important;
+         border: 1px solid rgba(158,70,173,0.2);
+         border-radius: 0 0 12px 12px;
+         width: 100%;',
           tags$div(
-            style = "padding: 20px; border-right: 1px solid rgba(158, 70, 173, 0.2);",
+            style = 'padding: 32px; border-right: 1px solid rgba(158,70,173,0.2);',
             tags$p("Año de referencia",
                    style = "font-size: 14px; font-weight: 700; color: #4D1A72; margin: 0 0 8px 0;"),
             tags$p("La mayoría de los datos corresponden al año 2021, año base de la ENDIREH. La información sobre presupuesto AVGM y cobertura mediática presenta limitaciones en algunas entidades. En estos casos, el índice se calcula con los datos disponibles y se marca explícitamente en el perfil del estado.",
                    style = "font-size: 13px; color: #1a1a2e; line-height: 1.6; margin: 0;")
           ),
           tags$div(
-            style = "padding: 20px; border-right: 1px solid rgba(158, 70, 173, 0.2);",
+            style = 'padding: 32px; border-right: 1px solid rgba(158,70,173,0.2);',
             tags$p("Accesibilidad visual",
                    style = "font-size: 14px; font-weight: 700; color: #4D1A72; margin: 0 0 8px 0;"),
             tags$p("La paleta de color utilizada en el mapa fue seleccionada con criterios de accesibilidad para personas con daltonismo. El gradiente amarillo-morado (YlPu) no depende del canal rojo para comunicar diferencias, siendo perceptible para personas con deuteranopia y protanopia. Fuente: ColorBrewer 2.0, Cynthia Brewer, Penn State. Licencia Apache 2.0.",
                    style = "font-size: 13px; color: #1a1a2e; line-height: 1.6; margin: 0;")
           ),
           tags$div(
-            style = "padding: 20px;",
+            style = 'padding: 32px; border-right: 1px solid rgba(158,70,173,0.2);',
             tags$p("Tecnología",
                    style = "font-size: 14px; font-weight: 700; color: #4D1A72; margin: 0 0 8px 0;"),
             tags$p("El mapa interactivo se desarrolló utilizando R con framework Golem para aplicaciones Shiny. Se utilizó Claude y Figma para el diseño y prototipado de la interfaz. El código puede consultarse en el repositorio de GitHub del proyecto.",
@@ -239,6 +248,17 @@ app_ui <- function(request) {
           tags$p("• ENDIREH", style = "font-size: 13px; color: rgba(255,255,241,0.8); margin: 0;"),
           tags$p("• ENVIPE", style = "font-size: 13px; color: rgba(255,255,241,0.8); margin: 0;"),
           tags$p("• Presupuestos de Egresos estatales 2026", style = "font-size: 13px; color: rgba(255,255,241,0.8); margin: 0;")
+        ),
+        tags$div(
+          style = 'border-top: 1px solid rgba(255,255,241,0.2);
+           margin-top: 32px;
+           padding-top: 16px;
+           text-align: center;
+           grid-column: 1 / -1;',
+          tags$p(
+            '© 2026 Radiografía de violencias · Última actualización: abril 2026',
+            style = 'font-size: 12px; color: rgba(255,255,241,0.6); margin: 0;'
+          )
         )
       )
     )
@@ -266,7 +286,12 @@ golem_add_external_resources <- function() {
     bundle_resources(
       path = app_sys("app/www"),
       app_title = "Radiografía de la violencia"
-    )
+    ),
+    tags$link(
+      rel = 'stylesheet',
+      href = 'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap'
+    ),
+    tags$link(rel = 'stylesheet', href = 'styles.css')
     # Add here other external resources
     # for example, you can add shinyalert::useShinyalert()
   )
